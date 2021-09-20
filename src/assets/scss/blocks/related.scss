@@ -1,0 +1,56 @@
+
+.related{
+    padding-bottom: .5rem;
+    
+    border-bottom: 1px solid #1c1c1c;
+}
+
+.related__list{
+    display: flex;
+    flex-wrap: wrap;
+
+    @include breakpoint($mobile-bp){
+        flex-direction: column;
+    }
+    
+}
+
+
+.related__list-item{
+    width: 50%;
+    margin-bottom: 2.5rem;
+
+    @include breakpoint($mobile-bp){
+        
+        width: 100%;
+    }
+    
+}
+
+.related__list-title{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #F3EBA2;
+
+
+
+
+    
+    // Ограничиваем заголовки одной  строкой
+
+
+    text-overflow: ellipsis; //показываем точки при скрытии контента
+    overflow: hidden;        //скрываем, что вылезает за пределы блока
+    white-space: nowrap;    //запрещаем перенос текста на новую строку
+
+    a{
+        color:inherit;
+
+    }
+}
+
+.related__list-date{
+    font-size: 1.2rem;
+    color: #828282;
+}
+
